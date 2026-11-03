@@ -23,9 +23,9 @@ class DatasetStorage:
         if entry is None:
             return None
         df = entry["df"].copy()
-        logger.debug(f"Retrieved dataset  copy: id={dataset_id}, rows={len(df)}")
+        logger.debug(f"Retrieved dataset copy: id={dataset_id}, rows={len(df)}")
         return df
-    
+
     def get_metadata(self, dataset_id):
         """Return the dataset metadata, or None."""
         entry = self._store.get(dataset_id)
